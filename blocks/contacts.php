@@ -23,7 +23,7 @@
 			</div>
 		</div>
 		<div class="text-center mb-20">
-			<a class="btn btn-default js-get-call">Заказать звонок</a>
+			<a class="btn btn-default btn-success js-get-call">Заказать звонок</a>
 		</div>
 
 	</div>

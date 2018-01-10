@@ -1,4 +1,5 @@
 var $modalGetConsultation = $("#get-call-modal");
+var $modalSuccess = $("#successModal");
 var $modalRedirect = $("#");
 var $modalFastDoor = $("#");
 var $articleModal = $("#article-dialog");
@@ -144,9 +145,11 @@ $(document).ready(function(){
             $("body").find(".tabs-result").addClass("hidden");
             $("body").find(".tabs-result[data-tabs-result='"+id+"']").removeClass("hidden");
         });
+
         $("body").on("click", ".js-please-call-me", function(){
             var nameInput = $(this).closest(".form").find("input#name");
             var phoneInput = $(this).closest(".form").find("input#phone");
+            var siteBlock = $(this).closest(".form").data("site-block");
             if(!nameInput.val().length) {
                 nameInput.addClass("error");
             }
@@ -154,9 +157,11 @@ $(document).ready(function(){
                 phoneInput.addClass("error");
             }
             if(nameInput.val().length && phoneInput.val().length==17){
-                sendRequest(nameInput.val(), phoneInput.val(), function(){
+                sendRequest(nameInput.val(), phoneInput.val(), siteBlock, function(){
                     nameInput.val(null);
                     phoneInput.val(null);
+                    $modalGetConsultation.modal("hide");
+                    $modalSuccess.modal();
                 });
             }
 
@@ -164,6 +169,7 @@ $(document).ready(function(){
         $modalGetConsultation.on("click", ".js-send-reques", function(){
             var name = $modalGetConsultation.find("input#name").val();
             var phone = $modalGetConsultation.find("input#phone").val();
+            var siteBlock = $(this).data("site-block");
             if(!name.length) {
                 $modalGetConsultation.find("input#name").addClass("error");
             }
@@ -171,9 +177,10 @@ $(document).ready(function(){
                 $modalGetConsultation.find("input#phone").addClass("error");
             }
             if(name.length && phone.length==17){
-                sendRequest(name, phone, function(){
+                sendRequest(name, phone, siteBlock, function(){
                     $modalGetConsultation.find("input").val(null);
                     $modalGetConsultation.modal("hide");
+                    $modalSuccess.modal();
                 });
             }
 
@@ -385,7 +392,7 @@ function click(ell, ee) {
     ResCarousel(ell, Parent, slide);
 }
 
-function sendRequest(name, phone, callback){
+function sendRequest(name, phone, siteBlock, callback){
     $.ajax({
         url: ajaxUrl,
         type: "post",
@@ -394,7 +401,8 @@ function sendRequest(name, phone, callback){
             ACTION: "sendRequest",
             PARAMETERS: {
                 name:name,
-                phone: phone
+                phone: phone,
+                siteBlock:siteBlock
             }
         }
     }).done(function (result) {

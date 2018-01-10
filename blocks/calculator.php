@@ -5,10 +5,10 @@
 			<h3>Давайте выберем ваши будущие ворота</h3>
 			<p>Воспользуйтесь нашим конструктором ворот и подберите наилучший для вас вариант</p>
 			<div class="tabs text-center mt-20 mb-20" id="calc_for_what_block">
-				<div class="btn_v2 btn btn-default btn-sm active" calc_for_what="2" data-id="garage">Гаражные</div>
-				<div class="btn_v2 btn btn-default btn-sm" calc_for_what="1" data-id="industrial">Промышленные</div>
-				<div class="btn_v2 btn btn-default btn-sm" calc_for_what="3" data-id="recoiling">Откатные</div>
-				<div class="btn_v2 btn btn-default btn-sm" calc_for_what="4" data-id="swinging">Распашные</div>
+				<div class="btn_v2 btn btn-default btn-success btn-sm active" calc_for_what="2" data-id="garage">Гаражные</div>
+				<div class="btn_v2 btn btn-default btn-success btn-sm" calc_for_what="1" data-id="industrial">Промышленные</div>
+				<div class="btn_v2 btn btn-default btn-success btn-sm" calc_for_what="3" data-id="recoiling">Откатные</div>
+				<div class="btn_v2 btn btn-default btn-success btn-sm" calc_for_what="4" data-id="swinging">Распашные</div>
 			</div>
 			<hr>
 			<div class="row">
@@ -88,7 +88,7 @@
 								правильный выбор, подтвердите параметры выбранные в нашем конструкторе ворот</p>
 						</div>
 						<div class="col-md-6 col-lg-6 col-xs-12 text-center">
-							<div class="btn btn-default btn-sm" href="#calc_consult">Подтвердить параметры</div>
+							<div class="btn btn-default btn-success btn-lg js-confirm-params">Подтвердить параметры</div>
 						</div>
 					</div>
 				</div>

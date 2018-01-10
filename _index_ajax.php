@@ -5,6 +5,7 @@ use system\models\Article;
 use system\models\Lead;
 use system\models\SQL;
 use system\models\AJAX;
+use system\models\SendMailSmtpClass;
 call_user_func($_POST["ACTION"], $_POST["PARAMETERS"]);
 
 function getCalculatePhotoUrl($arParams){
@@ -52,6 +53,7 @@ function getPaperById($arParams){
 }
 
 function sendRequest($arParams){
+    $site_block = $arParams["siteBlock"];
     $name = $arParams["name"];
     $phone = $arParams["phone"];
     $ip_address = getRealIpAddr();
@@ -70,14 +72,20 @@ function sendRequest($arParams){
                 <title>Заявка на вашем сайте</title> 
             </head> 
             <body> 
+                <h4>'.$site_block.'</h4>
                 <p><b>Имя:</b> '.$name.'</p>
                 <p><b>Телефон:</b> '.$phone.'</p> 
             </body> 
         </html>';
-        sendEmail($subject,$message);
+        $result = sendEmail($subject,$message);
+        if($result === true){
+            AJAX::Response(null, 0, "Письмо успешно отправлено");
+        }else {
+            AJAX::Response(null, 0, "Письмо не отправлено. Ошибка: " . $result);
+        }
     }catch (ErrorException $e){}
 
-    AJAX::Response(null, 0, "Ok");
+
 }
 
 function getRealIpAddr()
@@ -98,11 +106,12 @@ function getRealIpAddr()
 }
 
 function sendEmail($subject, $message){
-    $to  = "Shitov Dmitry &lt;shitovdmitry27@gmail.com>" ;
-    $to .= "S D &lt;ds@combeep.team>";
+    $mailSMTP = new SendMailSmtpClass('vorota-service@vor-service.ru', 'zrq342SNnZma', 'mx1.hostinger.ru', 'vorota-service', 587); // создаем экземпляр класса
+// заголовок письма
+    $headers= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
+    $headers .= "From: VokService<vorota-service@vor-service.ru>\r\n"; // от кого письмо
+    $result =  $mailSMTP->send('directreklama2016@yandex.ru', $subject, $message, $headers); // отправляем письмо
+    return $result;
 
-    $headers  = "Content-type: text/html; charset=utf-8 \r\n";
-    $headers .= "From: VokService<vorota.obninsk@bk.ru>\r\n";
-
-    mail($to, $subject, $message, $headers);
 }

@@ -4,10 +4,10 @@
 */
 return [
 	"database" => [
-	"host" => "mysql.hostinger.ru",
-	"database" => "u871500725_vorse",
-	"user" => "u871500725_vor",
-	"password" => "EGtbkj5T"
+	"host" => "localhost",
+	"database" => "landing",
+	"user" => "root",
+	"password" => ""
 ],
 "display_errors" => true,
 ];

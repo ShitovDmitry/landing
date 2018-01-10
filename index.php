@@ -35,7 +35,6 @@ require_once "_index.php"
     <link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/flexslider.css">
 
-    <script async src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body class="eschool" data-spy="scroll" data-target="#navbar" data-offset="70">
 
@@ -75,7 +74,7 @@ Body Content
         <div class="col-lg-3 col-md-4 col-xs-7 text-right">
             <div class="phone cursor-pointer"><?=$oSite->getMainPhone()?></div>
             <div class="phone cursor-pointer"><?=$oSite->getAdditionalPhone()?></div>
-            <a class="btn btn-default btn-sm btn-head mt-10 js-get-call">Заказать звонок!</a>
+            <a class="btn btn-default btn-success btn-sm btn-head mt-10 js-get-call">Заказать звонок!</a>
         </div>
     </div>
 </section>
@@ -102,7 +101,7 @@ Body Content
 										<li><h4  style="color:white">Бесплатная доставка</h4></li>
 										<li><h4  style="color:white">Строгое соблюдение сроков</h4></li>
 									</ul>
-									<a href="#calculator" class="btn btn-default" style="display: inline-block;">
+									<a href="#calculator" class="btn btn-default  btn-lg btn-success" style="display: inline-block;">
 										Перейти к калькулятору
 										<i class="fa fa-calculator" style="margin-left: 5px;"></i>
 									</a>
@@ -152,7 +151,7 @@ Body Content
 										<li>Доставка и выезд замерщика: бесплатно!</li>
 										<li>Звоните! Предложение ограничено!</li>
 									</ul>
-									<a href="#calculator" class="btn btn-default mt-20" style="display: inline-block;">
+									<a href="#calculator" class="btn btn-default btn-success mt-20" style="display: inline-block;">
 										Перейти к калькулятору
 										<i class="fa fa-calculator" style="margin-left: 5px;"></i>
 									</a>
@@ -212,7 +211,7 @@ Body Content
 									<h3>Автоматические ворота<br>(распашные, секционные, отктаные)</h3>
 									<hr>
 									<p>Поможем подобрать электропривод согласно вашим требованиям, чтобы съкономить ваши деньги!</p>
-									<a href="#calculator" class="btn btn-default" style="display: inline-block;">
+									<a href="#calculator" class="btn btn-default btn-success" style="display: inline-block;">
 										Перейти к калькулятору
 										<i class="fa fa-calculator" style="margin-left: 5px;"></i>
 									</a>
@@ -245,7 +244,7 @@ Body Content
 										<li>Индивидуальный подход к каждому проекту</li>
 										<li>Поможем подобрать электропривод согласно вашим требованиям, чтобы съкономить ваши деньги</li>
 									</ul>
-									<a href="#calculator" class="btn btn-default" style="display: inline-block;">
+									<a href="#calculator" class="btn btn-default btn-success" style="display: inline-block;">
 										Перейти к калькулятору
 										<i class="fa fa-calculator" style="margin-left: 5px;"></i>
 									</a>
@@ -424,7 +423,26 @@ Body Content
 
 
 <!--MODAL-->
-<div class="modal fade" id="get-call-modal">
+<div id="successModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="fa fa-check"></i>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                <h4>Отправлено</h4>
+                <p>Ваше сообщение успешно отправлено.</p>
+                <p>Наши менеджеры скоро свяжутся с вами</p>
+                <button class="btn btn-success" data-dismiss="modal"><span>Закрыть</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="get-call-modal" >
     <div class="modal-dialog" role="document">
         <div class="modal-content">
 			<div class="modal-header">
@@ -443,7 +461,7 @@ Body Content
                     <span class="input-group-addon"><i class="fa fa-phone"></i></span>
                     <input class="form-control" id="phone" required placeholder="Номер телефона">
                 </div>
-                <button class="btn btn-default btn-block mt-20 js-send-reques">Отправить</button>
+                <button class="btn btn-default btn-success btn-lg btn-block mt-20 js-send-reques" data-site-block="Модальное окно по клику на кнопку в шапке!">Отправить</button>
             </div>
         </div>
     </div>

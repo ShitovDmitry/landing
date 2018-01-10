@@ -23,6 +23,7 @@ include $_SERVER["DOCUMENT_ROOT"] . "/system/models/Site.php";
 include $_SERVER["DOCUMENT_ROOT"] . "/system/models/AJAX.php";
 include $_SERVER["DOCUMENT_ROOT"] . "/system/models/Article.php";
 include $_SERVER["DOCUMENT_ROOT"] . "/system/models/Lead.php";
+include $_SERVER["DOCUMENT_ROOT"] . "/system/models/SendMailSmtpClass.php";
 spl_autoload_register(function ($class_name) {
 	include $_SERVER["DOCUMENT_ROOT"] . "/system/models/" . str_replace("\\", "/", $class_name) . '.php';
 });

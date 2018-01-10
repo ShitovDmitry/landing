@@ -12,7 +12,7 @@
                         <div style="background-image: url('/img/econom.jpg')" class=" img" alt="Ворота эконом"></div>
 					</div>
 					<p class="block text-center">Цена от <span class="bold">29 000 рублей</span><br><br>
-                        <button class="btn btn-default btn-xs mb-10 js-get-call">ЗАКАЗАТЬ</button>
+                        <button class="btn btn-default btn-success btn-xs mb-10 js-get-call">ЗАКАЗАТЬ</button>
                     </p>
 					<ul class="main_ul">
 						<li>Каркас выполнен из профтрубы 60/40; ребра жесткости 40/20;</li>
@@ -30,7 +30,7 @@
                         <div style="background-image: url('/img/eco.jpg')" class="img" alt="Ворота эко"></div>
 					</div>
 					<p class="block text-center">Цена от <span class="bold">40 000 рублей</span><br><br>
-                        <button class="btn btn-default btn-xs mb-10 js-get-call">ЗАКАЗАТЬ</button>
+                        <button class="btn btn-default btn-success btn-xs mb-10 js-get-call">ЗАКАЗАТЬ</button>
                     </p>
 					<ul class="main_ul">
 						<li>Каркас выполнен из алюминиевого профиля</li>
@@ -46,7 +46,7 @@
 						<div style="background-image: url('/img/lux.png')" class="img" alt="Премиум ворота"></div>
 					</div>
 					<p class="block text-center">Цена от <span class="bold">70 000 рублей</span><br><br>
-                        <button class="btn btn-default btn-xs mb-10 js-get-call">ЗАКАЗАТЬ</button>
+                        <button class="btn btn-default btn-success btn-xs mb-10 js-get-call">ЗАКАЗАТЬ</button>
                     </p>
 
 					<ul class="main_ul">
@@ -72,8 +72,8 @@
 <!--								</div>-->
 <!--							</div>-->
 <!--						</div>-->
-<!--						<button class="btn btn-default leftLst"><</button>-->
-<!--						<button class="btn btn-default rightLst">></button>-->
+<!--						<button class="btn btn-default btn-success leftLst"><</button>-->
+<!--						<button class="btn btn-default btn-success rightLst">></button>-->
 <!--					</div>-->
 <!--				</div>-->
 <!--			</div>-->

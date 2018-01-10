@@ -41,7 +41,7 @@
 							<b>Оформите заявку прямо сейчас и получите 10% скидку на установку ворот</b>
 						</div>
 						<div class="col-md-4">
-							<button class="btn btn-default js-get-call">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+							<button class="btn btn-default btn-success js-get-call">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
 						</div>
 					</div>
 				</div>
@@ -65,7 +65,7 @@
                             <b>Оформите заявку прямо сейчас и получите 10% скидку на установку ворот</b>
 						</div>
 						<div class="col-md-4">
-							<button class="btn btn-default js-get-call">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+							<button class="btn btn-default btn-success js-get-call">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
 						</div>
 					</div>
 				</div>
@@ -89,7 +89,7 @@
                             <b>Оформите заявку прямо сейчас и получите 10% скидку на установку ворот</b>
 						</div>
 						<div class="col-md-4">
-							<button class="btn btn-default js-get-call">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+							<button class="btn btn-default btn-success js-get-call">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
 						</div>
 					</div>
 				</div>
@@ -113,7 +113,7 @@
                             <b>Оформите заявку прямо сейчас и получите 10% скидку на шлагбаума</b>
 						</div>
 						<div class="col-md-4">
-							<button class="btn btn-default js-get-call">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+							<button class="btn btn-default btn-success js-get-call">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
 						</div>
 					</div>
 				</div>
@@ -137,7 +137,7 @@
                             <b>Оформите заявку прямо сейчас и получите 10% скидку на установку</b>
 						</div>
 						<div class="col-md-4">
-							<button class="btn btn-default js-get-call">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+							<button class="btn btn-default btn-success js-get-call">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
 						</div>
 					</div>
 				</div>
