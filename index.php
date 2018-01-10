@@ -485,7 +485,7 @@ Script Source
 =================================-->
 
 
-<script src="/js/jquery.js"></script>
+<script src="/js/jquery.min.js"></script>
 <script src="/js/jquery.stellar.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/jquery.easing.1.3.js"></script>
