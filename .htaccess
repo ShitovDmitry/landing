@@ -1,0 +1,8 @@
+ <IfModule filter_module.c>
+    <IfVersion >= 2.4>
+      FilterProvider  COMPRESS  DEFLATE "%{CONTENT_TYPE} = 'text/html'"
+    </IfVersion>
+    <IfVersion <= 2.2>
+      FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/html
+    </IfVersion>
+  </IfModule>
