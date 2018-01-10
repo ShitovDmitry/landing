@@ -112,6 +112,7 @@ function sendEmail($subject, $message){
     $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
     $headers .= "From: VokService<vorota-service@vor-service.ru>\r\n"; // от кого письмо
     $result =  $mailSMTP->send('directreklama2016@yandex.ru', $subject, $message, $headers); // отправляем письмо
+    $result =  $mailSMTP->send('vorota.obninsk@bk.ru', $subject, $message, $headers); // отправляем письмо
     return $result;
 
 }

@@ -7,6 +7,7 @@ var itemsMainDiv = ('.MultiCarousel');
 var itemsDiv = ('.MultiCarousel-inner');
 var itemWidth = "";
 
+var TextParams = '';
 $(document).ready(function(){
 
 
@@ -78,6 +79,7 @@ $(document).ready(function(){
         Navigation
         =======================================*/
         $("body").on("click", ".js-get-call", function(){
+            TextParams = $(this).data("site-block");
             $modalGetConsultation.modal();
         });
         $("body").on("click", ".js-open-article-modal", function(){
@@ -166,10 +168,39 @@ $(document).ready(function(){
             }
 
         });
+
+        $("body").on("click", ".js-confirm-params", function () {
+
+            var door_type = $calculatorBlock.find(".tabs .btn.active").data("id");
+            var calc_profile = $calculatorBlock.find(".params:not(.hidden) #calc_profile").val();
+            var calc_manufacture = $calculatorBlock.find(".params:not(.hidden) #calc_manufacture").val();
+            var calc_plate = $calculatorBlock.find(".params:not(.hidden) #calc_plate").val();
+            var calc_control = $calculatorBlock.find(".params:not(.hidden) #calc_control").val();
+            var calc_color = $calculatorBlock.find(".params:not(.hidden) #calc_color").val();
+            var calc_fundament = $calculatorBlock.find(".params:not(.hidden) #calc_fundament").val();
+            var calc_type_color = $calculatorBlock.find(".params:not(.hidden) #calc_type_color").val();
+            var calc_wicket = $calculatorBlock.find(".params:not(.hidden) #calc_wicket").val();
+            var calc_lock = $calculatorBlock.find(".params:not(.hidden) #calc_lock").val();
+            TextParams = "Тип: "+typeDoor[door_type].name+"<br>";
+            if(calc_profile)TextParams += "Профиль: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_profile]+"<br>";
+            if(calc_manufacture)TextParams += "Производитель: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_manufacture]+"<br>";
+            if(calc_plate)TextParams += "Обшивка: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_plate]+"<br>";
+            if(calc_control)TextParams += "Управление: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_control]+"<br>";
+            if(calc_color)TextParams += "Цвет: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_color]+"<br>";
+            if(calc_fundament)TextParams += "Фундамент: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_fundament]+"<br>";
+            if(calc_type_color)TextParams += "Тип краски: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_type_color]+"<br>";
+            if(calc_wicket)TextParams += "Калитка: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_wicket]+"<br>";
+            if(calc_lock)TextParams += "Замок: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_lock]+"<br>";
+            $modalGetConsultation.find(".title").text("Подтверждение параметров");
+            $modalGetConsultation.modal();
+        });
+
         $modalGetConsultation.on("click", ".js-send-reques", function(){
+            $modalGetConsultation.find(".title").text("У вас есть вопрос?");
             var name = $modalGetConsultation.find("input#name").val();
             var phone = $modalGetConsultation.find("input#phone").val();
-            var siteBlock = $(this).data("site-block");
+            var siteBlock = TextParams ? TextParams: $(this).data("site-block");
+            TextParams = "";
             if(!name.length) {
                 $modalGetConsultation.find("input#name").addClass("error");
             }
