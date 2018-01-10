@@ -34,37 +34,8 @@ require_once "_index.php"
     <link rel="stylesheet" type="text/css" href="css/multicarusel.css">
     <link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/flexslider.css">
-    <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter47153586 = new Ya.Metrika({
-                    id:47153586,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    webvisor:true,
-                    trackHash:true,
-                    ecommerce:"dataLayer"
-                });
-            } catch(e) { }
-        });
 
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/47153586" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+    <script async src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body class="eschool" data-spy="scroll" data-target="#navbar" data-offset="70">
 
@@ -514,7 +485,7 @@ Script Source
 =================================-->
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="/js/jquery.js"></script>
 <script src="/js/jquery.stellar.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/jquery.easing.1.3.js"></script>
