@@ -171,6 +171,8 @@ $(document).ready(function(){
 
         $("body").on("click", ".js-confirm-params", function () {
 
+            var width = $calculatorBlock.find("#calc_width input").val();
+            var height = $calculatorBlock.find("#calc_height input").val();
             var door_type = $calculatorBlock.find(".tabs .btn.active").data("id");
             var calc_profile = $calculatorBlock.find(".params:not(.hidden) #calc_profile").val();
             var calc_manufacture = $calculatorBlock.find(".params:not(.hidden) #calc_manufacture").val();
@@ -181,7 +183,7 @@ $(document).ready(function(){
             var calc_type_color = $calculatorBlock.find(".params:not(.hidden) #calc_type_color").val();
             var calc_wicket = $calculatorBlock.find(".params:not(.hidden) #calc_wicket").val();
             var calc_lock = $calculatorBlock.find(".params:not(.hidden) #calc_lock").val();
-            TextParams = "Тип: "+typeDoor[door_type].name+"<br>";
+            TextParams = "Ширина: "+width+" мм<br> Высота: "+height+"мм <br>Тип: "+typeDoor[door_type].name+"<br>";
             if(calc_profile)TextParams += "Профиль: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_profile]+"<br>";
             if(calc_manufacture)TextParams += "Производитель: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_manufacture]+"<br>";
             if(calc_plate)TextParams += "Обшивка: "+typeDoor[door_type]["params_options"]["calc_profile"][calc_plate]+"<br>";
